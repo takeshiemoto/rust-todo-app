@@ -1,8 +1,8 @@
 <p>NGXS COUNTER APP</p>
-<p>{{count$ | async}}</p>
-<button (click)="increment()">+</button>
-<button (click)="decrement()">-</button>
+<p>{{ count$ | async }}</p>
+<button (click)="counter.increment()">+</button>
+<button (click)="counter.decrement()">-</button>
 <div>
-  <input type="text" [(ngModel)]="count">
-  <button (click)="add()">Add any number</button>
+  <input type="text" #count />
+  <button (click)="counter.add(count.value)">Add any number</button>
 </div>
