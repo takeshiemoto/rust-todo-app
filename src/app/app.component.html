@@ -1,1 +1,14 @@
-<app-counter></app-counter>
+<nav>
+  <ul>
+    <li>
+      <a [routerLink]="['counter-example']">Counter example</a>
+    </li>
+    <li>
+      <a [routerLink]="['todo-example']">Todo example</a>
+    </li>
+    <li>
+      <a [routerLink]="['async-heroes-example']">Async heroes example</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

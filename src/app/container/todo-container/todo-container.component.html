@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let todo of todoList$ | async">{{ todo?.name }}</li>
+</ul>
+<form [formGroup]="model">
+  <input type="text" formControlName="todo">
+  <button (click)="onSubmit()">追加</button>
+</form>

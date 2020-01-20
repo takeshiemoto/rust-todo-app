@@ -8,14 +8,24 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { CountState } from './state/count.state';
 import { CounterComponent } from './counter/counter.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TodoContainerComponent } from './container/todo-container/todo-container.component';
+import { TodoState } from './state/todo.state';
+import { HeroContainerComponent } from './container/hero-container/hero-container.component';
+import { HeroState } from './state/hero.state';
 
 @NgModule({
-  declarations: [AppComponent, CounterComponent],
+  declarations: [
+    AppComponent,
+    CounterComponent,
+    TodoContainerComponent,
+    HeroContainerComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxsModule.forRoot([CountState]),
+    ReactiveFormsModule,
+    NgxsModule.forRoot([CountState, TodoState, HeroState]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),
     FormsModule
