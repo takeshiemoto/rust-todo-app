@@ -5,7 +5,7 @@ use crate::repositories::{TodoRepository, TodoRepositoryForDb};
 use axum::{
     extract::Extension,
     routing::{get, post},
-    Json, Router,
+    Router,
 };
 
 use crate::handlers::{all_todo, create_todo, delete_todo, find_todo, update_todo};
